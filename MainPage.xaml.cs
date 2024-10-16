@@ -30,6 +30,11 @@ public partial class MainPage : ContentPage
 
     }
 
+    private async void PersonelPage(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("//ViewPersonal");
+    }
+
     private async void OnTestConnection(object sender, EventArgs e)
     {
         var connectionString = _dbConnenctonService.GetConnectionString();
@@ -49,6 +54,9 @@ public partial class MainPage : ContentPage
             ConnectionStatusLabel.TextColor = Colors.Red;
 
         }
-}
+
+      
+
+    }
 
 }

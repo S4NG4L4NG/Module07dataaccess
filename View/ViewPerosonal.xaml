@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module07dataaccess.View.ViewPerosonal"
+             Title="ViewPerosonal">
+    <VerticalStackLayout>
+        <Label Text="Personal Information"
+               FontSize="20"
+               HorizontalOptions="Center"/>
+
+        <ListView ItemsSource="{Binding PersonalList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding NAME}" 
+                              Detail="{Binding Gender}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Load Data" Command="{Binding LoadDataCommand}"/>
+        <Label x:Name="ConnectionStatus"
+               Text="{Binding StatusMessage}"
+               FontSize="18"
+               HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

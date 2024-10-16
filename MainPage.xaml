@@ -41,6 +41,10 @@
             <Button Text="Test Connecntion"
                     Clicked="OnTestConnection"
                     HorizontalOptions="Fill"/>
+
+            <Button Text="View Personel Page"
+                    Clicked="PersonelPage"
+                    HorizontalOptions="Fill"/>
         </VerticalStackLayout>
     </ScrollView>
 

@@ -21,10 +21,11 @@ namespace Module07dataaccess.ViewModel
         private bool _isBusy;
         public bool IsBusy
         {
-            get => IsBusy;
+            get => _isBusy;
             set
             {
                 _isBusy = value;
+                OnPropertyChanged();
             }
         }
         private string _statusMessage;
